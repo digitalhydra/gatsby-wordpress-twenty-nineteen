@@ -1,10 +1,11 @@
+require('dotenv').config();
 const Config = require('./config');
 
 module.exports = {
 	siteMetadata: {
-		title: `WordPress Headless + Gatsby + Twenty Nineteen Theme Example`,
-		description: `Re-creating Twenty Nineteen with Gatsby and pulling content from WordPress.`,
-		author: `@TheJeffMatson`,
+		title: process.env.SITE_TITLE,
+		description: process.env.SITE_DESCRIPTION,
+		author: process.env.SITE_AUTHOR,
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
